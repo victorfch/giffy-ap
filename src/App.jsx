@@ -8,13 +8,13 @@ function App() {
   const [gifs, setGifs] = useState([])
 
   useEffect(() => {
-    getGifs().then(gifs => setGifs(gifs))
+    getGifs({keyword: "marvel"}).then(gifs => setGifs(gifs))
   }, [])
 
   return (
     <div className="App">
       <section className="App-header">
-        {gifs.map(({id, title, url}) => <Gif key={id} title={title} url={url} />)}
+        {gifs.map(({id, title, url}) => <Gif key={id} title={title} url={url} id={id} />)}
       </section>
     </div>
   )
