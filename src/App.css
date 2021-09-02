@@ -13,11 +13,7 @@
 	color: white;
 	padding: 16px;
 }
-a {
-	text-decoration: none;
-	color: darkturquoise;
-	font-size: 48px;
-}
-a:hover {
-	color: #fff;
+
+.App-header__title {
+	cursor: pointer;
 }

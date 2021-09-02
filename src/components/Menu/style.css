@@ -1,0 +1,9 @@
+.link {
+	text-decoration: none;
+	color: darkturquoise;
+	font-size: 48px;
+}
+
+.link:hover {
+	color: #fff;
+}
