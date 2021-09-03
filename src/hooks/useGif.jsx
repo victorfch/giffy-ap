@@ -1,6 +1,6 @@
 import React, {useEffect, useContext} from 'react'
-import GifContext from '../../context/GifContext'
-import getGifs from '../../services/getGifs'
+import GifContext from '../context/GifContext'
+import getGifs from '../services/getGifs'
 
 export function useGif({keyword} = {keyword: null}) {
   const {gifs, setGifs} = useContext(GifContext)

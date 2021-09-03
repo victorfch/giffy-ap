@@ -1,9 +1,16 @@
-.link {
+#LazyMenu .menu {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.menu .link {
+	width: 50%;
 	text-decoration: none;
 	color: darkturquoise;
 	font-size: 48px;
 }
 
-.link:hover {
+.menu .link:hover {
 	color: #fff;
 }
