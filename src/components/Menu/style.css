@@ -1,7 +1,8 @@
-#LazyMenu .menu {
+.menu {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	margin-bottom: 50px;
 }
 
 .menu .link {
