@@ -1,6 +1,6 @@
-import React, {useEffect, useState, useRef} from 'react'
+import { useEffect, useState, useRef } from 'react'
 
-export function useNearScreen({once = true} = {}) {
+export function useNearScreen ({ once = true } = {}) {
   const [isNearScreen, setShow] = useState(false)
   const fromRef = useRef()
 
@@ -22,6 +22,6 @@ export function useNearScreen({once = true} = {}) {
     observer.observe(fromRef.current)
     return () => observer.disconnect()
   })
- 
-  return {isNearScreen, fromRef}
+
+  return { isNearScreen, fromRef }
 }

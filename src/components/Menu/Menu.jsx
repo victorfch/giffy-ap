@@ -3,8 +3,8 @@ import { Link } from 'wouter'
 import './style.css'
 import getTrendingGifs from '../../services/getTrendingGifs'
 
-export default function Menu() {
-  const [trendings, setTrendings] = useState([]);
+export default function Menu () {
+  const [trendings, setTrendings] = useState([])
   useEffect(() => {
     getTrendingGifs().then(setTrendings)
   }, [])

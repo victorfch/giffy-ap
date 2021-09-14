@@ -1,18 +1,17 @@
-import React, {useCallback, useEffect, useRef } from 'react'
+import React, { useCallback, useEffect } from 'react'
+import PropTypes from 'prop-types'
 import debounce from 'just-debounce-it'
 import GifList from '../components/GifList'
 import { useGif } from '../hooks/useGif'
-import {useNearScreen} from '../hooks/useNearScreen'
+import { useNearScreen } from '../hooks/useNearScreen'
 
-export default function Results({params}) {
-  const {keyword} = params
-  const {gifs, setPage} = useGif(params)
-  const {isNearScreen, fromRef} = useNearScreen({once: false})
-  
-  const handleNextPage = () => setPage((prevPage) => prevPage + 1)
+function Results ({ params }) {
+  const { keyword } = params
+  const { gifs, setPage } = useGif(params)
+  const { isNearScreen, fromRef } = useNearScreen({ once: false })
 
   const debounceNextPage = useCallback(debounce(
-    handleNextPage, 200
+    () => setPage((prevPage) => prevPage + 1), 200
   ), [])
 
   useEffect(() => {
@@ -29,3 +28,9 @@ export default function Results({params}) {
     <div id="visor" ref={fromRef}></div>
   </>)
 }
+
+Results.propTypes = {
+  params: PropTypes.object.isRequired
+}
+
+export default Results

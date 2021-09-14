@@ -4,8 +4,8 @@ import Finder from '../components/Finder'
 import GifList from '../components/GifList'
 import { useGif } from '../hooks/useGif'
 
-export default function Home() {
-  const {gifs} = useGif()
+export default function Home () {
+  const { gifs } = useGif()
   return (<>
     <Finder />
     <h2>Búsqueda reciente</h2>
