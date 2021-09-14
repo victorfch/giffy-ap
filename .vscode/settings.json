@@ -1,7 +1,0 @@
-{
-  "editor.detectIndentation": false,
-  "eslint.run": "onSave",
-  "[javascript]": {
-    "editor.formatOnSave": true
-  }
-}

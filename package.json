@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "lint": "eslint ./src/components/**/*.jsx --fix && eslint ./src/pages/**/*.jsx --fix",
+    "lint": "eslint ./src/**/*.jsx --fix && eslint ./src/**/*.js --fix",
     "build": "vite build",
     "serve": "vite preview"
   },
